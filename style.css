@@ -88,6 +88,6 @@ p {
       transform: translate(0, 0) rotate(0);
     }
     100% {
-      transform: translate(300px, 600px) rotate(720deg);
+      transform: translate(0, 600px) rotate(720deg);
     }
   }

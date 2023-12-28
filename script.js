@@ -7,7 +7,7 @@ $(document).ready(function () {
             $('#result').removeClass("hidden");
             function createConfetti() {
                 var confetti = $('<div class="confetti"></div>');
-                var startX = Math.random() * window.innerWidth;
+                var startX = Math.random() * (window.innerWidth -100 );
                 var rotate = Math.random() * 360;
             
                 confetti.css({
@@ -16,7 +16,10 @@ $(document).ready(function () {
                 });
             
                 $('#confetti-container').append(confetti);
-            
+                
+                if (confetti.position().left >= window.innerWidth){
+                  confetti.remove();
+                }
                 setTimeout(function() {
                   confetti.remove();
                 }, 2000); // Adjust the duration as needed
