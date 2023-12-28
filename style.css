@@ -73,3 +73,21 @@ p {
 .hidden {
     display: none;
 }
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    animation: fall 2s ease-out infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translate(0, 0) rotate(0);
+    }
+    100% {
+      transform: translate(300px, 600px) rotate(720deg);
+    }
+  }
